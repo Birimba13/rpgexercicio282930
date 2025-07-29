@@ -28,19 +28,22 @@ interface
   //Herança
   type TPlayer = class (TPersonagem)
     NickName:String;
-    Experiência:Double;
+    Experiencia:Double;
+    function getDano:Integer;
+    procedure setDano(ADano:Integer);
   end;
 
   type TBoss = class (TPersonagem)
-
+    HabilidadeEspecial:String;
+    function getDano:Integer;
+    procedure setDano(ADano:Integer);
   end;
-
 
 implementation
 
 uses System.SysUtils;
 
-{  Clsse : TPersonagem }
+{  Classe : TPersonagem }
 
 constructor TPersonagem.Create(aDano, aDefesa, aVida, aNivel: Integer);
 begin
@@ -101,4 +104,29 @@ begin
   end;
   Self.Nivel:=aDefesa;
 end;
+
+{ TBoss }
+
+function TBoss.getDano: Integer;
+begin
+
+end;
+
+procedure TBoss.setDano(aDano: Integer);
+begin
+
+end;
+
+{ TPlayer }
+
+function TPlayer.getDano: Integer;
+begin
+
+end;
+
+procedure TPlayer.setDano(aDano: Integer);
+begin
+
+end;
+
 end.
